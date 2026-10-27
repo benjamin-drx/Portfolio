@@ -1,0 +1,119 @@
+.accueil {
+  min-height: calc(100vh - 160px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 8%;
+  overflow-x: clip;
+}
+
+/* Le système solaire */
+.systeme {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1;
+  margin: auto;
+}
+
+.soleil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  background: radial-gradient(circle at 35% 30%, lightyellow, sandybrown 30%, orchid 60%, slateblue);
+  box-shadow: 0 0 30px plum, 0 0 80px slateblue;
+}
+
+.orbite {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid var(--bordure);
+  border-radius: 50%;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+
+.orbite-1 { width: 34%; height: 34%; }
+.orbite-2 { width: 54%; height: 54%; }
+.orbite-3 { width: 74%; height: 74%; }
+.orbite-4 { width: 94%; height: 94%; }
+
+.orbite-1 { rotate: 60deg; }
+.orbite-1 .planete { rotate: -60deg; }
+
+.orbite-2 { rotate: 200deg; }
+.orbite-2 .planete { rotate: -200deg; }
+
+.orbite-3 { rotate: 120deg; }
+.orbite-3 .planete { rotate: -120deg; }
+
+.orbite-4 { rotate: -50deg; }
+.orbite-4 .planete { rotate: 50deg; }
+
+
+.planete {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+  width: clamp(26px, 4vw, 42px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: inset -8px -6px 12px black, 0 0 20px currentColor;
+  transition: scale 0.2s;
+  pointer-events: auto; 
+}
+
+.planete:hover {
+  scale: 1.25;
+}
+
+.planete span {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  translate: -50% 0;
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--texte);
+}
+
+/* Couleurs des planètes */
+.planete-projets  { background: radial-gradient(circle at 30% 27%, peachpuff, salmon 31%, crimson 65%, indigo); color: salmon; }
+.planete-parcours { background: radial-gradient(circle at 32% 24%, aliceblue, paleturquoise 30%, royalblue 61%, midnightblue); color: lightskyblue; }
+.planete-apropos  { background: radial-gradient(circle at 32% 26%, lavenderblush, violet 33%, rebeccapurple 66%, indigo); color: plum; }
+.planete-contact  { background: radial-gradient(circle at 30% 26%, honeydew, yellowgreen 32%, seagreen 63%, darkslategray); color: palegreen; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .accueil {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .texte {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .accueil {
+    padding: 30px 16px;
+  }
+
+  .planete span {
+    font-size: 8px;
+  }
+}

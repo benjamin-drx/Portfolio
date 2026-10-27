@@ -1,0 +1,52 @@
+.grille-projets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne */
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.carte {
+  padding: 14px 14px 22px;
+  border: 1px solid var(--bordure);
+  background: var(--fond-carte);
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.carte:hover {
+  transform: translateY(-5px); /* la carte remonte un peu au survol */
+  border-color: var(--violet);
+}
+
+.carte-image {
+  height: 150px;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 32px;
+  color: lavender;
+  background: radial-gradient(ellipse, darkslateblue, black 70%);
+}
+
+.carte h2 {
+  margin: 18px 0 8px;
+  font-size: 22px;
+}
+
+.carte p {
+  color: var(--gris);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grille-projets {
+    grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+  }
+}
+
+@media (max-width: 600px) {
+  .grille-projets {
+    grid-template-columns: 1fr; /* 1 carte par ligne */
+  }
+}

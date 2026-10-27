@@ -1,0 +1,76 @@
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 560px;
+  margin-top: 30px;
+  padding: 30px;
+  border: 1px solid var(--bordure);
+  background: var(--fond-carte);
+}
+
+.formulaire label {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--gris);
+}
+
+.formulaire input,
+.formulaire textarea {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  color: var(--texte);
+  background: black;
+  border: 1px solid var(--bordure);
+  border-radius: 6px;
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+  outline: none;
+  border-color: var(--violet);
+}
+
+.formulaire button {
+  margin-top: 18px;
+  padding: 14px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: white;
+  background: var(--violet);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.formulaire button:hover {
+  opacity: 0.85;
+}
+
+/* Bouton gris pendant l'envoi */
+.formulaire button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* Message affiché après l'envoi (vert ou rouge) */
+.statut {
+  min-height: 1.5em;
+  margin: 6px 0 0;
+  font-size: 14px;
+}
+
+.statut.succes { color: mediumaquamarine; }
+.statut.erreur { color: lightcoral; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .formulaire {
+    padding: 20px;
+  }
+}

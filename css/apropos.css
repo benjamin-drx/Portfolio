@@ -1,0 +1,28 @@
+.apropos {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.avatar {
+  flex: none;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  font-weight: 800;
+  background: radial-gradient(circle at 32% 24%, lavenderblush, violet 33%, rebeccapurple 66%, indigo);
+  box-shadow: 0 0 40px mediumorchid;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .apropos {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

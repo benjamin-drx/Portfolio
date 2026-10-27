@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Benjamin Desrousseaux</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/commun.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <div class="etoiles"></div>
+
+  <header class="entete">
+    <a class="logo" href="index.html">
+      <span class="logo-rond">B.</span>
+      BENJAMIN <span class="gris">DESROUSSEAUX</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="projets.html">Projets</a>
+      <a href="parcours.html">Parcours</a>
+      <a href="apropos.html">À propos</a>
+      <a class="actif" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <a class="retour" href="index.html">← RETOUR AU SYSTÈME</a>
+    <p class="petit-titre">PLANÈTE 04</p>
+    <h1>Me <em>contacter ?</em></h1>
+    <p class="texte">Une question, une idée de projet ou simplement envie d'échanger ? Écris-moi.</p>
+
+    <!--
+      Le formulaire est envoyé à FormSubmit,
+      qui transfère le message par e-mail.
+    -->
+    <form id="formulaire" class="formulaire" action="https://formsubmit.co/ajax/desrousseauxbenjamin31@gmail.com" method="POST">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" placeholder="Ton nom" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="ton@email.com" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Ton message..." required></textarea>
+
+      <!-- Options de FormSubmit -->
+      <input type="hidden" name="_subject" value="Nouveau message depuis mon portfolio">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" id="bouton">Envoyer le message ↗</button>
+      <p id="statut" class="statut"></p>
+    </form>
+  </main>
+
+  <footer class="pied">
+    © 2026 BENJAMIN DESROUSSEAUX · ✳
+  </footer>
+  <script src="js/contact.js"></script>
+</body>
+</html>

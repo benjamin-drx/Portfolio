@@ -10,12 +10,28 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 36px;
-  font-weight: 800;
-  background: radial-gradient(circle at 32% 24%, lavenderblush, violet 33%, rebeccapurple 66%, indigo);
+  object-fit: cover; /* la photo remplit le rond sans être déformée */
+  border: 2px solid var(--violet);
   box-shadow: 0 0 40px mediumorchid;
+}
+
+/* Bouton pour télécharger le CV */
+.bouton-cv {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 20px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--violet);
+  border: 1px solid var(--violet);
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.bouton-cv:hover {
+  color: white;
+  background: var(--violet);
 }
 
 /* Responsive */
